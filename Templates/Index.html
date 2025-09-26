@@ -120,45 +120,44 @@
   <body>
 
   <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0542a7;">
+    <nav class="navbar navbar-expand-lg" style="background:linear-gradient(90deg, #0542a7, #1e62d0); box-shadow:0 2px 8px rgba(0,0,0,0.2); position:sticky; top:0; z-index:1000; padding:12px 0; transition:all 0.3s ease-in-out; font-family:'Poppins', sans-serif;">
   <div class="container-fluid">
-    <div class="logo">
-      <img class="myimg" src="{{url_for('static', filename='img (1).png')}}" alt="">
-    </div>
-    <a class="navbar-brand" href="#">Health Care Center</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+    <!-- Logo & Name (left corner) -->
+    <a class="navbar-brand d-flex align-items-center" href="/index" style="font-weight:700; color:#fff; transition:color 0.3s; margin-left:10px; font-size:20px;">
+      <img src="{{ url_for('static', filename='img (1).png') }}" alt="Logo" style="height:40px; width:40px; margin-right:10px; border-radius:50%; object-fit:cover;">
+      Health Care Center
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+    <!-- Menu (aligned right) -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+      <ul class="navbar-nav mb-2 mb-lg-0" style="gap:20px; font-weight:600; margin-right:15px; font-size:16px;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/index">Home</a>
+          <a class="nav-link" href="/" style="color:#fff; transition:all 0.3s;">Home</a>
         </li>
-
-         <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
-        </li>
-
         <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
+          <a class="nav-link" href="/about" style="color:#fff; transition:all 0.3s;">About</a>
         </li>
-
         <li class="nav-item">
-          <a class="nav-link" href="/developer">Developer</a>
+          <a class="nav-link" href="/contact" style="color:#fff; transition:all 0.3s;">Contact</a>
         </li>
-
         <li class="nav-item">
-          <a class="nav-link" href="/blog">Blog</a>
+          <a class="nav-link" href="/developer" style="color:#fff; transition:all 0.3s;">Developer</a>
         </li>
-
+        <li class="nav-item">
+          <a class="nav-link" href="/blog" style="color:#fff; transition:all 0.3s;">Blog</a>
+        </li>
       </ul>
-      <!-- <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
     </div>
   </div>
 </nav>
+
   <!-- main form of page -->
 <h1 class="heading text-center">Health Care Center</h1>
 
